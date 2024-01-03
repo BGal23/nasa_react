@@ -1,0 +1,1 @@
+import{j as o}from"./index-uBHuwtK5.js";const e="_footer_15cbo_1",t={footer:e},s=()=>o.jsx("footer",{className:t.footer,children:o.jsx("p",{children:"This website was created while learning React"})});export{s as F};
