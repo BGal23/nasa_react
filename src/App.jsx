@@ -4,7 +4,6 @@ import { useEffect, lazy, Suspense } from "react";
 import { fetchData } from "./redux/operations";
 import "./App.css";
 const MenuBar = lazy(() => import("./components/MenuBar/MenuBar"));
-const Footer = lazy(() => import("./components/Footer/Footer"));
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Gallery = lazy(() => import("./pages/Gallery"));
@@ -29,7 +28,6 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
-        <Footer />
       </Suspense>
     </>
   );

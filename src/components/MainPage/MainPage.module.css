@@ -2,11 +2,21 @@
   padding: 0 15px;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 .robot {
-  height: 300px;
-  width: 300px;
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
   border: 5px solid #ff9c3c;
-  border-radius: 150px;
+  border-radius: calc(50%);
+}
+
+.mars {
+  height: calc(100%);
+  width: calc(100%);
 }
 
 .link {
