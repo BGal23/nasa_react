@@ -1,0 +1,21 @@
+.display {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  display: block;
+  color: #fff;
+  font-size: medium;
+  background-color: #0b3d91;
+  border: 0 none;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: scale 0.3s ease;
+}
+
+.button:hover {
+  scale: 1.1;
+}

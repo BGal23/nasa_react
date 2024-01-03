@@ -1,0 +1,29 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b3d91;
+  color: #fff;
+  height: 40px;
+  font-size: 25px;
+  padding: 0 10px;
+  font-family: "Nasalization", sans-serif;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.link {
+  transition: scale 0.3s ease;
+}
+
+.link:hover {
+  scale: 1.1;
+}

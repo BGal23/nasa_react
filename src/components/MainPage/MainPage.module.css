@@ -1,0 +1,18 @@
+.main {
+  padding: 0 15px;
+}
+
+.robot {
+  height: 300px;
+  width: 300px;
+  border: 5px solid #ff9c3c;
+  border-radius: 150px;
+}
+
+.link {
+  color: #0b3d91;
+}
+
+.link:hover {
+  color: #fc3d21;
+}
