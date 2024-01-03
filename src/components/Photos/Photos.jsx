@@ -1,9 +1,11 @@
 import { useSelector } from "react-redux";
-import { selectPhotos } from "../../redux/selectors";
+import { selectIsLoading, selectPhotos } from "../../redux/selectors";
 import css from "./Photos.module.css";
+import Loader from "../Loader/Loader";
 
 const Photos = () => {
   const list = useSelector(selectPhotos);
+  const isLoading = useSelector(selectIsLoading);
 
   return (
     <div className={css.gallery}>
@@ -15,6 +17,7 @@ const Photos = () => {
           alt="marian photo"
         />
       ))}
+      {isLoading && <Loader />}
     </div>
   );
 };
