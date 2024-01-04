@@ -1,0 +1,29 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.photo {
+  width: calc(100vw - 20px);
+}
+
+.button {
+  display: block;
+  color: white;
+  background: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 87%;
+  top: 0;
+}

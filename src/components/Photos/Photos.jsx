@@ -1,24 +1,20 @@
 import { useSelector } from "react-redux";
 import { selectIsLoading, selectPhotos } from "../../redux/selectors";
-import css from "./Photos.module.css";
 import Loader from "../Loader/Loader";
+import PhotoItem from "../PhotoItem/PhotoItem";
+import css from "./Photos.module.css";
 
 const Photos = () => {
   const list = useSelector(selectPhotos);
   const isLoading = useSelector(selectIsLoading);
 
   return (
-    <div className={css.gallery}>
+    <ul className={css.gallery}>
       {list.map((photo) => (
-        <img
-          className={css.photo}
-          key={photo.id}
-          src={photo.img_src}
-          alt="marian photo"
-        />
+        <PhotoItem key={photo.id} photo={photo} />
       ))}
       {isLoading && <Loader />}
-    </div>
+    </ul>
   );
 };
 

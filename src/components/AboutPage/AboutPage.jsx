@@ -12,8 +12,8 @@ const AboutPage = () => {
         help prepare for human exploration. To contribute to these goals, MSL
         has eight main scientific objectives:
       </p>
-      <h3>Biological</h3>
-      <ul>
+      <ol>
+        <h3>Biological</h3>
         <li>Determine the nature and inventory of organic carbon compounds.</li>
         <li>
           Investigate the chemical building blocks of life (carbon, hydrogen,
@@ -23,9 +23,7 @@ const AboutPage = () => {
           Identify features that may represent the effects of biological
           processes (biosignatures and biomolecules).
         </li>
-      </ul>
-      <h3>Geological and geochemical</h3>
-      <ul>
+        <h3>Geological and geochemical</h3>
         <li>
           Investigate the chemical, isotopic, and mineralogical composition of
           the Martian surface and near-surface geological materials.
@@ -33,9 +31,7 @@ const AboutPage = () => {
         <li>
           Interpret the processes that have formed and modified rocks and soils.
         </li>
-      </ul>
-      <h3>Planetary process</h3>
-      <ul>
+        <h3>Planetary process</h3>
         <li>
           Assess long-timescale (i.e., 4-billion-year) Martian atmospheric
           evolution processes.
@@ -44,9 +40,7 @@ const AboutPage = () => {
           Determine present state, distribution, and cycling of water and carbon
           dioxide.
         </li>
-      </ul>
-      <h3>Surface radiation</h3>
-      <ul>
+        <h3>Surface radiation</h3>
         <li>
           Characterize the broad spectrum of surface radiation, including
           galactic and cosmic radiation, solar proton events and secondary
@@ -55,7 +49,7 @@ const AboutPage = () => {
           it is continuing radiation measurements as it explores the surface of
           Mars. This data would be important for a future crewed mission.
         </li>
-      </ul>
+      </ol>
       <p>
         About one year into the surface mission, and having assessed that
         ancient Mars could have been hospitable to microbial life, the MSL

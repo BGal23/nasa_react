@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { photosReducer } from "./photosSlice";
+import { filtersReducer } from "./filtersSlice";
 
 const store = configureStore({
   reducer: {
     photos: photosReducer,
-    //filter: filterReducer
+    filters: filtersReducer,
   },
 });
 

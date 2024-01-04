@@ -16,7 +16,7 @@ const photosSlice = createSlice({
     items: [],
     isLoading: false,
     error: null,
-    pageNumber: false,
+    isNextPage: false,
   },
   extraReducers: (builder) => {
     builder
@@ -25,7 +25,7 @@ const photosSlice = createSlice({
         state.items = [...state.items, ...actions.payload];
         state.isLoading = false;
         state.error = null;
-        state.pageNumber = actions.meta.arg;
+        state.pagePage = actions.meta.arg;
       })
       .addCase(fetchData.rejected, handleRejected);
   },
