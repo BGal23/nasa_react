@@ -13,31 +13,28 @@ const MainPage = () => {
           {" "}
           About{" "}
         </Link>
-        tab if you want to learn more about missions to Mars. Or go straight to
-        the
+        tab if you want to learn more about &ldquo;Timeline of Mars Science
+        Laboratory&rdquo; missions and Curiosity rover. Or go straight to the
         <Link className={css.link} to="gallery">
           {" "}
           Gallery{" "}
         </Link>
-        tab if you want to see photos
+        tab if you want to see photos from this mission.
       </p>
       <div className={css.robotContainer}>
         <img className={css.robot} src={robot} alt="robot" />
       </div>
-      <h2>Test title</h2>
+      <h2>Pictures</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
-        soluta, officia nihil debitis optio mollitia laboriosam perspiciatis
-        excepturi rem repellat iste vel, itaque ipsa. Delectus dolorum unde
-        recusandae nulla odit reprehenderit a, obcaecati voluptates blanditiis
-        dolore itaque deserunt labore voluptas laudantium quos eaque harum ipsam
-        nesciunt ratione dolorem maiores perferendis eligendi, alias modi! Culpa
-        assumenda soluta quas debitis vitae perspiciatis asperiores obcaecati
-        saepe, consequatur suscipit eius voluptate reprehenderit accusantium
-        temporibus? Voluptatem optio, vitae laborum placeat ipsum odit
-        accusantium obcaecati? Labore, perspiciatis modi hic enim qui officia
-        quae, saepe vero rerum totam neque vel sequi omnis incidunt, non quas
-        veniam quis?
+        The Curiosity rover&rsquo;s mission has provided a wealth of captivating
+        images, offering unprecedented views of the Martian landscape. These
+        photos showcase the rugged terrain, revealing the diverse geological
+        features that have fueled scientific exploration. From breathtaking
+        panoramas to close-ups of intriguing rock formations, Curiosity&rsquo;s
+        images have deepened our understanding of Mars&rsquo; history and
+        environment. The rover&rsquo;s camera systems have been instrumental in
+        capturing the Red Planet&rsquo;s unique beauty, providing a visual
+        journey for scientists and space enthusiasts alike.
       </p>
       <div className={css.container}>
         <img className={css.mars} src={mars} alt="mars" />
