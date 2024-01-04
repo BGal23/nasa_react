@@ -1,0 +1,1 @@
+import{j as s}from"./index-mdafvPzr.js";const r="_loader_10p7d_1",a="_planet_10p7d_6",e="_rings1_10p7d_1",t="_rings2_10p7d_1",n={loader:r,planet:a,rings1:e,rings2:t},d=()=>s.jsx("div",{className:n.loader,children:s.jsx("div",{className:n.planet})});export{d as default};
