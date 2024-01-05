@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../../redux/operations";
 import css from "./Button.module.css";
-import { selectIsLoading } from "../../redux/selectors";
+import { selectDate, selectIsLoading } from "../../redux/selectors";
 
 const Button = () => {
   const dispatch = useDispatch();
-  const nextPage = () => dispatch(fetchData(true));
+  const date = useSelector(selectDate);
+  const nextPage = () => dispatch(fetchData({ date: date, isNextPage: true }));
   const isLoading = useSelector(selectIsLoading);
 
   return (

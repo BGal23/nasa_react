@@ -33,13 +33,13 @@ const Modal = () => {
                 Link to original photo: <Link to={modal.img_src}>-link-</Link>
               </li>
             </ul>
-            <h3>{modal.rover.name} rover data:</h3>
+            {/* <h3>{modal.rover.name} rover data:</h3>
             <ul>
               <li>Landing date: {modal.rover.landing_date}</li>
               <li>Mars sol: {modal.rover.max_sol}</li>
               <li>Total photos: {modal.rover.total_photos}</li>
               <li>Status: {modal.rover.status}</li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       )}

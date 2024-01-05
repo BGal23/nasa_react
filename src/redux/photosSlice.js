@@ -17,15 +17,22 @@ const photosSlice = createSlice({
     isLoading: false,
     error: null,
     isNextPage: false,
+    date: "2022-1-1",
   },
   extraReducers: (builder) => {
     builder
       .addCase(fetchData.pending, handlePending)
       .addCase(fetchData.fulfilled, (state, actions) => {
-        state.items = [...state.items, ...actions.payload];
+        const isOpen = actions.meta.arg.isNextPage;
+        if (isOpen) {
+          state.items = [...state.items, ...actions.payload];
+        } else {
+          state.items = [...actions.payload];
+        }
         state.isLoading = false;
         state.error = null;
-        state.pagePage = actions.meta.arg;
+        state.date = actions.meta.arg.date;
+        state.isNextPage = actions.meta.arg.isNextPage;
       })
       .addCase(fetchData.rejected, handleRejected);
   },

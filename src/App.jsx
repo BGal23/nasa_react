@@ -14,7 +14,7 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchData(false));
+    dispatch(fetchData({ date: "2022-1-1", isNextPage: false }));
   }, [dispatch]);
 
   return (

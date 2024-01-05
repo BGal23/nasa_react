@@ -8,13 +8,15 @@ let number = 1;
 
 export const fetchData = createAsyncThunk(
   "photos/fetchData",
-  async (isNextPage, thunkAPI) => {
+  async ({ date, isNextPage }, thunkAPI) => {
     try {
       if (isNextPage) {
         number++;
+      } else {
+        number = 1;
       }
       const resp = await axios.get(
-        `photos?earth_date=2024-1-1&per_page=5&page=${number}&api_key=${keyAPI}`
+        `photos?earth_date=${date}&per_page=5&page=${number}&api_key=${keyAPI}`
       );
       return resp.data.photos;
     } catch (error) {
