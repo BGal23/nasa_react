@@ -9,9 +9,16 @@ const GetDate = () => {
   const date = useSelector(selectDate);
   const landing = new Date("2012-08-06").getTime();
   const today = new Date();
+  const utcDay = 86400000;
+  const utcTime = new Date(date).getTime();
 
   const setGetDate = async (event) => {
-    let newDate = event.currentTarget.value;
+    let newDate;
+    if (typeof event === "object") {
+      newDate = event.currentTarget.value;
+    } else {
+      newDate = event;
+    }
 
     if (!isNaN(newDate)) {
       newDate = new Date(Number(newDate));
@@ -20,19 +27,26 @@ const GetDate = () => {
     return dispatch(fetchData({ date: newDate, isNextPage: false }));
   };
 
+  const setButton = (event) => {
+    if (event.currentTarget.name === "+") setGetDate(utcTime + utcDay);
+    else setGetDate(utcTime - utcDay);
+  };
+
   return (
     <>
       <input
-        className={css.date}
         type="range"
+        className={css.date}
         onChange={setGetDate}
-        value={new Date(date).getTime()}
+        value={utcTime}
         min={landing}
         max={today.getTime()}
-        step={86400000}
+        step={utcDay}
       />
       <div className={css.buttons}>
-        <button>-</button>
+        <button className={css.button} name="-" onClick={setButton}>
+          -
+        </button>
         <input
           type="date"
           value={date}
@@ -40,7 +54,9 @@ const GetDate = () => {
           min="2012-08-06"
           max={changeDate(today)}
         />
-        <button>+</button>
+        <button className={css.button} name="+" onClick={setButton}>
+          +
+        </button>
       </div>
     </>
   );

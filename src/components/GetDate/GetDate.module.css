@@ -8,3 +8,18 @@
   justify-content: center;
   gap: 20px;
 }
+
+.button {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  background-color: #0b3d91;
+  font-size: larger;
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  scale: 1.1;
+}
