@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useEffect, lazy, Suspense } from "react";
 import { fetchData } from "./redux/operations";
 import "./App.css";
+import changeDate from "./redux/changeDate";
 const MenuBar = lazy(() => import("./components/MenuBar/MenuBar"));
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -14,7 +15,8 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchData({ date: "2022-1-1", isNextPage: false }));
+    const today = changeDate(new Date());
+    dispatch(fetchData({ date: today, isNextPage: false }));
   }, [dispatch]);
 
   return (

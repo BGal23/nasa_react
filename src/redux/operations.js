@@ -15,6 +15,7 @@ export const fetchData = createAsyncThunk(
       } else {
         number = 1;
       }
+      date = date.split("-0").join("-");
       const resp = await axios.get(
         `photos?earth_date=${date}&per_page=5&page=${number}&api_key=${keyAPI}`
       );

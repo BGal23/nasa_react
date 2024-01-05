@@ -2,3 +2,9 @@
   margin: 0 15px;
   width: calc(100% - 30px);
 }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

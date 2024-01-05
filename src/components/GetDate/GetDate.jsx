@@ -1,21 +1,23 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { selectDate } from "../../redux/selectors";
 import css from "./GetDate.module.css";
 import { fetchData } from "../../redux/operations";
+import changeDate from "../../redux/changeDate";
 
 const GetDate = () => {
   const dispatch = useDispatch();
-  const landing = new Date("2012-8-6").getTime();
-  const today = new Date().getTime();
+  const date = useSelector(selectDate);
+  const landing = new Date("2012-08-06").getTime();
+  const today = new Date();
 
-  const setGetDate = (event) => {
-    const newDate = event.target.value;
-    const formatDate = new Date(Number(newDate))
-      .toISOString()
-      .replace("T22:00:00.000Z", "")
-      .split("-0")
-      .join("-");
+  const setGetDate = async (event) => {
+    let newDate = event.currentTarget.value;
 
-    dispatch(fetchData({ date: formatDate, isNextPage: false }));
+    if (!isNaN(newDate)) {
+      newDate = new Date(Number(newDate));
+      newDate = await changeDate(newDate);
+    }
+    return dispatch(fetchData({ date: newDate, isNextPage: false }));
   };
 
   return (
@@ -24,10 +26,22 @@ const GetDate = () => {
         className={css.date}
         type="range"
         onChange={setGetDate}
+        value={new Date(date).getTime()}
         min={landing}
-        max={today}
+        max={today.getTime()}
         step={86400000}
       />
+      <div className={css.buttons}>
+        <button>-</button>
+        <input
+          type="date"
+          value={date}
+          onChange={setGetDate}
+          min="2012-08-06"
+          max={changeDate(today)}
+        />
+        <button>+</button>
+      </div>
     </>
   );
 };
