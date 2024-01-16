@@ -23,8 +23,8 @@ const Modal = () => {
               ╳
             </button>
             <img className={css.photo} src={modal.img_src} />
-            <h3>Photo data:</h3>
-            <ul>
+            {/* <h3>Photo data:</h3> */}
+            {/* <ul>
               <li>Earth date: {modal.earth_date}</li>
               <li>Mars sol: {modal.sol}</li>
               <li>Rover: {modal.rover.name}</li>
@@ -32,7 +32,7 @@ const Modal = () => {
               <li>
                 Link to original photo: <Link to={modal.img_src}>-link-</Link>
               </li>
-            </ul>
+            </ul> */}
             {/* <h3>{modal.rover.name} rover data:</h3>
             <ul>
               <li>Landing date: {modal.rover.landing_date}</li>

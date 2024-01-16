@@ -15,7 +15,7 @@ const PhotoItem = ({ photo }) => {
   };
 
   return (
-    <li id={photo.id} onClick={modalOpen}>
+    <li className={css.li} id={photo.id} onClick={modalOpen}>
       <img className={css.photo} src={photo.img_src} alt="marian photo" />
     </li>
   );

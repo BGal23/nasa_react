@@ -7,13 +7,14 @@
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 1;
   color: white;
-  padding: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .photo {
-  width: calc(100vw - 20px);
+  max-width: calc(100vw - 20px);
+  max-height: calc(100vh - 20px);
 }
 
 .button {

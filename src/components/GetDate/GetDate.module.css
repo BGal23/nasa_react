@@ -1,12 +1,20 @@
-.date {
-  margin: 0 15px;
-  width: calc(100% - 30px);
+.range {
+  width: 100%;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+}
+
+.date {
+  min-width: 110px;
+}
+
+.folder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .button {
@@ -18,8 +26,14 @@
   font-size: larger;
   color: white;
   cursor: pointer;
+  transition: scale 0.3s ease;
+  margin: 0 10px;
 }
 
 .button:hover {
   scale: 1.1;
+}
+
+.rightSide {
+  text-align: right;
 }

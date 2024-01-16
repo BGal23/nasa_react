@@ -36,27 +36,32 @@ const GetDate = () => {
     <>
       <input
         type="range"
-        className={css.date}
+        className={css.range}
         onChange={setGetDate}
         value={utcTime}
         min={landing}
         max={today.getTime()}
         step={utcDay}
       />
-      <div className={css.buttons}>
-        <button className={css.button} name="-" onClick={setButton}>
-          -
-        </button>
-        <input
-          type="date"
-          value={date}
-          onChange={setGetDate}
-          min="2012-08-06"
-          max={changeDate(today)}
-        />
-        <button className={css.button} name="+" onClick={setButton}>
-          +
-        </button>
+      <div className={css.folder}>
+        <div>2012-08-06</div>
+        <div className={css.buttons}>
+          <button className={css.button} name="-" onClick={setButton}>
+            -
+          </button>
+          <input
+            type="date"
+            className={css.date}
+            value={date}
+            onChange={setGetDate}
+            min="2012-08-06"
+            max={changeDate(today)}
+          />
+          <button className={css.button} name="+" onClick={setButton}>
+            +
+          </button>
+        </div>
+        <div className={css.rightSide}>{changeDate(today)}</div>
       </div>
     </>
   );
