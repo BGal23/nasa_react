@@ -1,3 +1,9 @@
 .photo {
   width: 100%;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+
+.photo:hover {
+  scale: 1.02;
 }

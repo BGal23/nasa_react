@@ -17,7 +17,7 @@ const photosSlice = createSlice({
     isLoading: false,
     error: null,
     isNextPage: false,
-    date: "2022-1-1",
+    date: "2012-08-06",
   },
   extraReducers: (builder) => {
     builder

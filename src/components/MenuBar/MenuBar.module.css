@@ -42,6 +42,9 @@
   .navigation {
     gap: 25px;
   }
+  .menu {
+    height: 50px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -50,5 +53,8 @@
   }
   .navigation {
     gap: 30px;
+  }
+  .menu {
+    height: 60px;
   }
 }

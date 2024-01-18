@@ -24,11 +24,11 @@ const MenuBar = () => {
               <StyledLink className={css.link} to="/">
                 Home
               </StyledLink>
-              <StyledLink className={css.link} to="/about">
-                About
-              </StyledLink>
               <StyledLink className={css.link} to="/gallery">
                 Gallery
+              </StyledLink>
+              <StyledLink className={css.link} to="/creator">
+                Creator
               </StyledLink>
             </div>
           </div>

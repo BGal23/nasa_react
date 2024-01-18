@@ -1,3 +1,11 @@
+@media screen and (min-width: 768px) {
+  .main {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 40px;
+  }
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -6,6 +14,7 @@
 .robot {
   height: calc(100% - 10px);
   width: calc(100% - 10px);
+  max-width: 400px;
   border: 5px solid #ff9c3c;
   border-radius: calc(50%);
 }
@@ -13,6 +22,7 @@
 .mars {
   height: calc(100%);
   width: calc(100%);
+  max-width: 400px;
 }
 
 .link {
